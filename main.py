@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import streamlit as st
 
 
 class DealScraper:
@@ -35,7 +36,9 @@ class DealScraper:
                 temperature = int(''.join(char for chars in temperature for char in chars if char.isdigit()))
 
                 if temperature >= self.targeted_temperature:
-                    print(f'{temperature} \n{title} \n{price} \npage : {page_number} \n{link} \n')
+                    st.markdown(
+                        f'<br>{temperature}°<br>{title}<br>{price}<br>page : {page_number}<br>[See more...]({link})', unsafe_allow_html=True
+                    )
 
             except Exception as e:
                 print(e)
