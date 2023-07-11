@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<body>
+    <div class="card-container">
+        <span class="product-title">{{title}}</span>
+        <span class="product-temperature">{{temperature}}°</span>
+        <span class="product-price">{{price}}</span>
+        <span class="product-page-number">page: {{page_number}}</span>
+        <a href="{{link}}" class="product-link">See more...</a>
+    </div>
+</body>
+</html>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-container {
+    width: 500px;
+    height: 350px;
+    background-color: #424242;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-temperature {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-page-number {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-link {
+    font-size: 16px;
+    font-weight: bold;
+}
+</style>
